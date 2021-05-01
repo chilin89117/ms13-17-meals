@@ -20,10 +20,10 @@ const HeaderCartBtn = ({onShowCart}) => {    // props passed from App.js thru He
     if (cartCtx.items.length === 0) return
     // add .bump class to <button>
     setBtnAnimated(true)
-    // remove .bump class after 300ms animation (see css)
+    // remove .bump class after 250ms animation (see css)
     const timerId = setTimeout(() => {
       setBtnAnimated(false)
-    }, 300)
+    }, 250)
     return () => clearTimeout(timerId)
   }, [cartCtx.items])
 
